@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+<head>
+	<title>Angular Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A angular build template with email messenging, side navigation, and cdns for development.">
+	<meta name="keywords" content="Javascript, Full-Stack, Front-End, Node, Web Development">
+	<meta name="author" content="Micah Dunson">
+	<meta name="revisit-after" content="30 days">
+	<!-- Bootstrap -->
+	<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+	<!-- Angular-Material-CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.css">
+	<!-- Bootstrap Font: Awesome -->
+	<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
+	<!-- CSS Animate -->
+	<link rel="stylesheet" type="text/css" href="/css/animate.css-master/animate.min.css">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<!-- Side Nav CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/side-nav.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body >
+	<!-- Mobile view side-nav -->
+	<md-input-container>
+		<div id='sideNavContainer' class="container">
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" ng-click="vm.closeNav()">×</a>
+				<a href="#" ui-sref='Home' ng-click="vm.closeNav()">Home</a>
+				<a href="#" ui-sref='' ng-click="vm.closeNav()">Experience</a>
+				<a href="#" ui-sref=''ng-click="vm.closeNav()" >Contact</a>
+			</div>
+			<!-- Use any element to open/show the overlay navigation menu -->
+			<span style="font-size:30px;cursor:pointer;" ng-click="vm.openNav()">☰</span>
+			<!-- <span onclick="openNav()">open</span> -->
+		</div>
+	</md-input-container>
+
+	<ui-view></ui-view>
+
+													<!---      Libs    --->
+		<!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<!-- Angular -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+	<!-- Angular-UI-Router -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<!--  Angular Material -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-aria.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"></script>
+	<!-- Angular-UI-Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+
+
+											<!---    modules    --->
+	<script src="/javascript/app.js"></script>
+
+		<!-- Services -->
+	<script src="/javascript/services/MainService.js"></script>
+
+		<!-- Controllers -->
+	<script src="/javascript/controllers/GlobalController.js"></script>
+	<script src="/javascript/controllers/MainController.js"></script>
+</body>
+</html>
