@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-  var offset = 100;
+  var offset = 350;
 
   var navContainer = $("#cd-nav"),
    mainNav = navContainer.find("#cd-main-nav ul");
