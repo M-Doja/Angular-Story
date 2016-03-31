@@ -1,5 +1,5 @@
-angular.module('ContactsApp').controller('EditContactController', function($http, $state, $stateParams){
+angular.module('App').controller('GlobalController', function($http, $state, $stateParams){
   var vm = this;
 
-  
+
 });

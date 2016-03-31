@@ -1,4 +1,4 @@
-angular.module('ContactsApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider){
+angular.module('App', ['ui.router','ngMaterial', 'ui.bootstrap','ngAnimate']).config(function($stateProvider, $urlRouterProvider){
   $stateProvider.state('Home', {
     url: '/',
     templateUrl: '/templates/home.html'

@@ -1,4 +1,4 @@
-angular.module('App').factory('ContactFactory', function($http, $q){
+angular.module('App').factory('mainService', function($http, $q){
   var o = {};
 
 

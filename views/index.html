@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='App'>
 <head>
-	<title>Angular Template</title>
+	<title>Angular Story</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A angular build template with email messenging, side navigation, and cdns for development.">
@@ -18,26 +18,97 @@
 	<link rel="stylesheet" type="text/css" href="/css/animate.css-master/animate.min.css">
 	<!-- Bootstrap theme -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
-	<!-- Side Nav CSS -->
-	<link rel="stylesheet" type="text/css" href="/css/side-nav.css">
 	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/modal.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<style media="screen">
+
+	</style>
 </head>
-<body >
+<body>
 	<!-- Mobile view side-nav -->
-	<md-input-container>
-		<div id='sideNavContainer' class="container">
-			<div id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" class="closebtn" ng-click="vm.closeNav()">×</a>
-				<a href="#" ui-sref='Home' ng-click="vm.closeNav()">Home</a>
-				<a href="#" ui-sref='' ng-click="vm.closeNav()">Experience</a>
-				<a href="#" ui-sref=''ng-click="vm.closeNav()" >Contact</a>
+	<md-input-container data-ng-controller='GlobalController'>
+		<div id='' class="container">
+			<!-- LOGIN BAR -->
+			<div class="login text-right">
+				<ul>
+					<li><a href='#0' id="myBtn">login</a></li>
+					<li><a href="#" id="myBtn2">Sign Up</a></li>
+				</ul>
 			</div>
-			<!-- Use any element to open/show the overlay navigation menu -->
-			<span style="font-size:30px;cursor:pointer;" ng-click="vm.openNav()">☰</span>
-			<!-- <span onclick="openNav()">open</span> -->
+			<!-- TITLE & NAVIGATION -->
+			<div id="cd-nav">
+	      <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	      <header>
+	        <a name="1"></a><h1>The Star by H G Wells</h1>
+	      </header>
+	      <nav id="cd-main-nav">
+					<p style="text-align:center;margin-bottom:5px;">Chapter:</p>
+	        <ul id="nav">
+	          <li><a href="#1">ONE</a></li>
+	          <li><a href="#2">TWO</a></li>
+	          <li><a href="#3">THREE</a></li>
+	          <li><a href="#4">FOUR</a></li>
+	          <li><a href="#5">FIVE</a></li>
+	        </ul>
+	      </nav>
+	    </div>
+
 		</div>
 	</md-input-container>
+
+	<div data-ng-controller="GlobalController">
+		<!-- The Login Modal -->
+		<div id="myModal" class="modal" title="Login form" visible="showModal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">x</span>
+		    <p class="text-center">Login</p>
+					<md-content style="background:#ccc;border-radius:8px;">
+					<md-input-container>
+						<input ng-model="user.email" type="" placeholder="Email">
+					</md-input-container>
+
+					<md-input-container>
+						<input ng-model="user.password" type="" placeholder="Password">
+					</md-input-container>
+						</md-content><br>
+				<md-button type="submit" class="md md-default md-raised md-block" style='width:100%;margin:0;'>Login</md-button>
+      </div>
+		  </div>
+		</div>
+
+		<!-- The Sign Up Modal -->
+		<div id="myModal2" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">x</span>
+		    <p>Sign Up</p>
+
+				<md-content style="background:#ccc;border-radius:8px;">
+					<md-input-container>
+		        <input ng-model="user.userName" placeholder="User Name">
+		      </md-input-container>
+
+			    <md-input-container>
+		        <input ng-model="user.email" type="" placeholder="Email">
+		      </md-input-container>
+
+					<md-input-container>
+						<input ng-model="user.password" type="" placeholder="Password">
+					</md-input-container>
+				</md-content><br>
+
+					<md-button class='md md-default md-raised' style='width:100%;margin:0;' type="button"> Join!</md-button>
+					<hr>
+					<p class="text-center" style="margin-bottom:15px;margin-top:-10px;">or <br>Log in using:</p>
+					<md-button class="md md-primary md-raised">FaceBook</md-button>
+					<md-button class="md md-primary md-raised">Google</md-button>
+					<md-button class="md md-primary md-raised">Twitter</md-button>
+		  </div>
+		</div>
+	</div>
+
 
 	<ui-view></ui-view>
 
@@ -58,6 +129,8 @@
 
 											<!---    modules    --->
 	<script src="/javascript/app.js"></script>
+	<script src="/javascript/smartNav.js"></script>
+	<script src="/javascript/modal.js"></script>
 
 		<!-- Services -->
 	<script src="/javascript/services/MainService.js"></script>

@@ -1,5 +1,5 @@
-angular.module('ContactsApp').controller('MainController', function($http, ContactFactory){
+angular.module('App').controller('MainController', function($http){
   var vm = this;
-  
+
 
 });
